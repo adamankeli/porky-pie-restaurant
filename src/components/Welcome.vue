@@ -1,6 +1,7 @@
 <template>
   <div class="welcome">
-    <h1>{{ msg }}</h1>
+    <img id="logoImg" alt="Vue logo" src="../assets/logo.png">
+    <h1>Welcome to Porky Pie Restaurant</h1>
     <p>
       For a guide and recipes on how to configure / customize this project
     </p>
@@ -8,21 +9,22 @@
             <div class="column">
                 <div class="card">
                     <h3>Table 1</h3>
-                    <p>Some text</p>
+                    <p>Add Person's to table</p>
                     <button> Book Table </button>
+    <router-link to="/table">About</router-link>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
                     <h3>Table 2</h3>
-                    <p>Some text</p>
+                    <p>Add Person's to table</p>
                     <button> Book Table </button>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
-                    <h3>Table 2</h3>
-                    <p>Some text</p>
+                    <h3>Table 3</h3>
+                    <p>Add Person's to table</p>
                     <button> Book Table </button>
                 </div>
             </div>
@@ -32,10 +34,7 @@
 
 <script>
 export default {
-  name: 'Welcome to Porky Pie Restaurant',
-  props: {
-    msg: String
-  }
+  name: 'welcome'
 }
 </script>
 
