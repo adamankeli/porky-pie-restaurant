@@ -6,7 +6,7 @@
     <order-table :persons="persons" @delete:person="deletePerson" @edit:person="editPerson" />
     <div class="Crbutton">
         <router-link to="/"><button id="cancelbtn">Cancel</button></router-link>
-        <router-link to="/"><button>Complete Order</button></router-link>
+        <router-link to="/complete"><button>Complete Order</button></router-link>
     </div>
   </div>
 </template>
