@@ -50,8 +50,6 @@ h1, h2 {
 }
 .welcome {
   width: 100%;
-  display: grid;
-  justify-content: center;
 }
 /* Float four columns side by side */
 .column {
@@ -61,12 +59,16 @@ h1, h2 {
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
+.row {
+  margin: 0 -5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
 
 /* Clear floats after the columns */
 .row:after {
   content: "";
-  display: table;
   clear: both;
 }
 
