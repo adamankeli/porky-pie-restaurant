@@ -1,17 +1,17 @@
 <template>
     <div id="person-form">
         <form @submit.prevent="handleSubmit">
-            <label> Person Name </label>
+            <label> Customer Full Name </label>
             <input ref="first" v-model="person.name" type="text" :class="{ 'has-error': submitting && invalidName }" @focus="clearStatus" @keypress="clearStatus" />
-            <label> Person Email </label>
+            <label> Customer Email Adress </label>
             <input v-model="person.email" type="text" :class="{ 'has-error': submitting && invalidEmail }" @focus="clearStatus"/>
              <p v-if="error && submitting" class="error-message">
                 ❗Please complete all required fields
             </p>
             <p v-if="success" class="success-message">
-                ✅ Person successfully added to Table
+                ✅ Customer Successfully added to the Table
             </p>
-            <button> Add Person </button>
+            <button> Add Customer </button>
         </form>
     </div>
 </template>
@@ -27,11 +27,20 @@ export default {
         person:{
             name: '',
             email: '',
+            order: '',
         },
     }
   },
   methods: {
-    handleSubmit () { 
+   async handleSubmit () { 
+        try {
+            const response = await fetch('https://baconipsum.com/api/?type=all-meat&sentences=1')
+            const data = await response.json()
+            this.person.order = data
+        } catch (error) {
+            console.error(error)
+        }
+
         this.submitting = true
         this.clearStatus()
 
@@ -46,6 +55,7 @@ export default {
         this.person = {
             name: '',
             email: '',
+            order: '',
         }
         this.error = false
         this.success = true

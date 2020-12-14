@@ -1,10 +1,14 @@
 <template>
-  <div id="table" class="small-container">
-    <h1> Table Orders </h1>
-    
-    <person-form @add:person="addPerson" />
-    <order-table :persons="persons" @delete:person="deletePerson" @edit:person="editPerson" />
-    <div class="Crbutton">
+  <div id="table">
+    <div class="small-container">
+        <h1> Table Orders </h1>
+        <p> Add Customer to table </p>
+        <person-form @add:person="addPerson" />
+    </div>
+    <div class="container">
+        <order-table :persons="persons" @delete:person="deletePerson" @edit:person="editPerson" />
+    </div>
+    <div class="Crbutton small-container">
         <router-link to="/"><button id="cancelbtn">Cancel</button></router-link>
         <router-link to="/complete"><button>Complete Order</button></router-link>
     </div>
