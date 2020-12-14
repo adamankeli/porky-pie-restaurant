@@ -1,8 +1,6 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <router-link :to="{ name: 'welcome' }">Home</router-link>
-    <router-link to="/table">About</router-link>
   </div>
 </template>
 

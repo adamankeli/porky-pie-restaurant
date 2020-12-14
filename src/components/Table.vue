@@ -4,6 +4,10 @@
     
     <person-form @add:person="addPerson" />
     <order-table :persons="persons" @delete:person="deletePerson" @edit:person="editPerson" />
+    <div class="Crbutton">
+        <router-link to="/"><button id="cancelbtn">Cancel</button></router-link>
+        <router-link to="/"><button>Complete Order</button></router-link>
+    </div>
   </div>
 </template>
 
@@ -56,5 +60,18 @@ button {
 
 .small-container {
   max-width: 680px;
+}
+.Crbutton{
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 1px;
+}
+#cancelbtn{
+    background: rgb(168, 57, 57);
+    border: 1px solid rgb(168, 57, 57);
+}
+#cancelbtn:hover{
+    background: rgb(17, 13, 13);
+    border: 1px solid rgb(17, 14, 14);
 }
 </style>

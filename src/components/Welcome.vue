@@ -3,29 +3,28 @@
     <img id="logoImg" alt="Vue logo" src="../assets/logo.png">
     <h1>Welcome to Porky Pie Restaurant</h1>
     <p>
-      For a guide and recipes on how to configure / customize this project
+      Select table below
     </p>
     <div class="row">
             <div class="column">
                 <div class="card">
                     <h3>Table 1</h3>
                     <p>Add Person's to table</p>
-                    <button> Book Table </button>
-    <router-link to="/table">About</router-link>
+                    <router-link to="/table"><button>Book Table</button></router-link>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
                     <h3>Table 2</h3>
                     <p>Add Person's to table</p>
-                    <button> Book Table </button>
+                    <router-link to="/table"><button>Book Table</button></router-link>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
                     <h3>Table 3</h3>
                     <p>Add Person's to table</p>
-                    <button> Book Table </button>
+                    <router-link to="/table"><button>Book Table</button></router-link>
                 </div>
             </div>
     </div>
